@@ -104,3 +104,98 @@ textarea:focus {
   outline: 2px solid hsl(var(--ring));
   outline-offset: 2px;
 }
+
+/* Code syntax highlighting */
+pre {
+  overflow-x: auto;
+}
+
+code {
+  font-family: 'Fira Code', 'Monaco', 'Cascadia Code', 'Roboto Mono', monospace;
+}
+
+/* Prose styling for lesson content */
+.prose {
+  color: #374151;
+  line-height: 1.7;
+}
+
+.prose h1 {
+  color: #111827;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.prose h2 {
+  color: #1f2937;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose h3 {
+  color: #374151;
+  font-weight: 500;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose p {
+  margin-bottom: 1rem;
+}
+
+.prose ul {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.prose li {
+  margin-bottom: 0.25rem;
+  list-style-type: disc;
+}
+
+.prose strong {
+  font-weight: 600;
+  color: #111827;
+}
+
+.prose code {
+  background-color: #f3f4f6;
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.prose pre {
+  background-color: #1f2937;
+  color: #10b981;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.prose pre code {
+  background-color: transparent;
+  padding: 0;
+  color: inherit;
+}
+
+/* Animation for hover effects */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
