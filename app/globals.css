@@ -69,8 +69,8 @@
 }
 
 /* Bengali font support */
-body {
-  font-family: "Inter", "Noto Sans Bengali", "SolaimanLipi", sans-serif;
+.font-hind-siliguri {
+  font-family: var(--font-hind-siliguri), sans-serif;
 }
 
 /* Custom scrollbar */
@@ -111,7 +111,7 @@ pre {
 }
 
 code {
-  font-family: 'Fira Code', 'Monaco', 'Cascadia Code', 'Roboto Mono', monospace;
+  font-family: "Fira Code", "Monaco", "Cascadia Code", "Roboto Mono", monospace;
 }
 
 /* Prose styling for lesson content */
@@ -184,8 +184,14 @@ code {
 
 /* Animation for hover effects */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-fade-in {

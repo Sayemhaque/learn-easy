@@ -11,7 +11,9 @@ export function Header() {
         <div className='flex items-center space-x-2'>
           <BookOpen className='h-8 w-8 text-blue-600' />
           <Link href='/'>
-            <span className='text-2xl font-bold text-gray-900'>শিখন</span>
+            <span className='text-2xl font-bold text-gray-900'>
+              আমার কোডিং স্কুল{" "}
+            </span>
           </Link>
         </div>
         <nav className='hidden md:flex items-center space-x-6'>

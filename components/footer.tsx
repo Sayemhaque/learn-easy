@@ -1,109 +1,73 @@
-import Link from "next/link"
-import { BookOpen, Github, Twitter, Youtube } from "lucide-react"
+import { BookOpen } from "lucide-react";
+import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="border-t bg-gray-50">
-      <div className="container py-12 md:py-16">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
-          <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <BookOpen className="h-6 w-6 text-blue-600" />
-              <span className="font-bold">ML Engineer বাংলা</span>
+    <footer className='bg-gray-900 text-white py-12 px-4'>
+      <div className='max-w-6xl mx-auto'>
+        <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
+          <div className='space-y-4'>
+            <div className='flex items-center space-x-2'>
+              <BookOpen className='h-6 w-6 text-blue-400' />
+              <span className='text-xl font-bold'>শিখন</span>
             </div>
-            <p className="text-sm text-muted-foreground">মেশিন লার্নিং এবং ডিপ লার্নিং শেখার জন্য সম্পূর্ণ বাংলা গাইড।</p>
-            <div className="flex space-x-4">
-              <Link href="#" className="text-muted-foreground hover:text-blue-600">
-                <Github className="h-5 w-5" />
-              </Link>
-              <Link href="#" className="text-muted-foreground hover:text-blue-600">
-                <Twitter className="h-5 w-5" />
-              </Link>
-              <Link href="#" className="text-muted-foreground hover:text-blue-600">
-                <Youtube className="h-5 w-5" />
-              </Link>
-            </div>
+            <p className='text-gray-400'>
+              বাংলায় প্রোগ্রামিং শেখার সবচেয়ে সহজ প্ল্যাটফর্ম
+            </p>
           </div>
-          <div className="space-y-4">
-            <h4 className="text-sm font-semibold">ডকুমেন্টেশন</h4>
-            <ul className="space-y-2 text-sm">
+
+          <div>
+            <h4 className='font-semibold mb-4'>কোর্স</h4>
+            <ul className='space-y-2 text-gray-400'>
               <li>
-                <Link href="/docs/introduction" className="text-muted-foreground hover:text-blue-600">
-                  পরিচিতি
-                </Link>
-              </li>
-              <li>
-                <Link href="/docs/mathematics" className="text-muted-foreground hover:text-blue-600">
-                  গণিত ভিত্তি
-                </Link>
-              </li>
-              <li>
-                <Link href="/docs/machine-learning" className="text-muted-foreground hover:text-blue-600">
+                <Link
+                  href='/courses/machine-learning'
+                  className='hover:text-white transition-colors'>
                   মেশিন লার্নিং
                 </Link>
               </li>
               <li>
-                <Link href="/docs/deep-learning" className="text-muted-foreground hover:text-blue-600">
-                  ডিপ লার্নিং
+                <Link
+                  href='/courses/javascript'
+                  className='hover:text-white transition-colors'>
+                  জাভাস্ক্রিপ্ট
                 </Link>
               </li>
             </ul>
           </div>
-          <div className="space-y-4">
-            <h4 className="text-sm font-semibold">রিসোর্স</h4>
-            <ul className="space-y-2 text-sm">
+
+          <div>
+            <h4 className='font-semibold mb-4'>সাহায্য</h4>
+            <ul className='space-y-2 text-gray-400'>
               <li>
-                <Link href="/roadmap" className="text-muted-foreground hover:text-blue-600">
-                  রোডম্যাপ
-                </Link>
-              </li>
-              <li>
-                <Link href="/examples" className="text-muted-foreground hover:text-blue-600">
-                  উদাহরণ
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="text-muted-foreground hover:text-blue-600">
-                  ব্লগ
-                </Link>
-              </li>
-              <li>
-                <Link href="/community" className="text-muted-foreground hover:text-blue-600">
-                  কমিউনিটি
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div className="space-y-4">
-            <h4 className="text-sm font-semibold">সাহায্য</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/faq" className="text-muted-foreground hover:text-blue-600">
+                <Link
+                  href='/faq'
+                  className='hover:text-white transition-colors'>
                   FAQ
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-muted-foreground hover:text-blue-600">
+                <Link
+                  href='/contact'
+                  className='hover:text-white transition-colors'>
                   যোগাযোগ
-                </Link>
-              </li>
-              <li>
-                <Link href="/support" className="text-muted-foreground hover:text-blue-600">
-                  সাপোর্ট
-                </Link>
-              </li>
-              <li>
-                <Link href="/contribute" className="text-muted-foreground hover:text-blue-600">
-                  অবদান রাখুন
                 </Link>
               </li>
             </ul>
           </div>
+
+          <div>
+            <h4 className='font-semibold mb-4'>আমাদের মিশন</h4>
+            <p className='text-gray-400 text-sm'>
+              প্রযুক্তি শিক্ষাকে সবার কাছে পৌঁছে দেওয়া, সহজ বাংলায়
+            </p>
+          </div>
         </div>
-        <div className="mt-8 border-t pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; 2024 ML Engineer বাংলা ডকুমেন্টেশন। সকল অধিকার সংরক্ষিত।</p>
+
+        <div className='border-t border-gray-800 mt-8 pt-8 text-center text-gray-400'>
+          <p>&copy; ২০২৪ শিখন। সকল অধিকার সংরক্ষিত।</p>
         </div>
       </div>
     </footer>
-  )
+  );
 }

@@ -6,14 +6,13 @@ import { useState } from "react";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { Card, CardContent } from "./ui/card";
 
-// Custom code block component with copy functionality
 function CodeBlock({ children, className, ...props }: any) {
   const [copied, setCopied] = useState(false);
   const match = /language-(\w+)/.exec(className || "");
   const language = match ? match[1] : "javascript";
 
-  // Extract string content from children
   const getCodeString = (children: any): string => {
     if (typeof children === "string") {
       return children;
@@ -132,8 +131,15 @@ interface LessonContentProps {
 
 export default function LessonContent({ content }: LessonContentProps) {
   return (
-    <div className='prose prose-lg max-w-none mb-8'>
-      <ReactMarkdown components={markdownComponents}>{content}</ReactMarkdown>
-    </div>
+    <Card>
+      <CardContent>
+        {" "}
+        <div className='prose prose-lg max-w-none mb-8'>
+          <ReactMarkdown components={markdownComponents}>
+            {content}
+          </ReactMarkdown>
+        </div>
+      </CardContent>
+    </Card>
   );
 }
